@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: lowercase;
+    text-align: left;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+/* Welcome Section */
+.form {
+    width: 40%;
+    max-width: 100%;
+    background: #1c1c1c;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px white;
+    text-align: center;
+    margin: auto;
+}
+
+/* About Me Section */
+.about {
+    margin-bottom: 30px;
+}
+
+.about h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+    
+}
+
+/* Floating Particles */
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+P {
+    color: white;
+    text-decoration-line:underline ;
+
+}
+
+button {
+    --green: #ffffff;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1%, transparent 40%,transparent 60% , rgba(255, 255, 255, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4), 0 0 9px 3px rgba(255, 255, 255, 0.1);
+  }
+  
+  button:hover {
+    color: #ffffff;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.6), 0 0 9px 3px rgba(255, 255, 255, 0.2);
+  }
+  
+  button:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(255, 255, 255, 0.1) 40%,rgba(255, 255, 255, 0.1) 60% , transparent 100%);
+  }
+  
+  button:hover:before {
+    transform: translateX(15em);
+  }
+
+  a {
+    color: white;
+    text-decoration-line:underline
+  }
