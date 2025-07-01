@@ -1,0 +1,138 @@
+/* General */
+body {
+  background-color: rgb(11, 12, 12);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔻 HEADER BAR */
+.headcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #0f0f10;
+}
+
+.headlink {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.headlink:hover {
+  color: rgb(133, 133, 133);
+}
+
+.separator {
+  color: white;
+  font-size: 26px;
+  user-select: none;
+}
+
+.home-icon {
+  height: 54px;
+  vertical-align: middle;
+}
+
+/* 🔻 INTRO SECTION */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: white;
+}
+
+.intro {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 30px;
+}
+
+.subheading {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #888;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1c;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.social i {
+  margin-right: 10px;
+  color: #ffffff;
+  width: 24px;
+  text-align: center;
+}
+
+.count {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.worked-with-section {
+  background-color: #0f0f10;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.worked-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.logo-row img {
+  height: 40px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-row img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.hobbies{
+  background-color: #0b0b0b;
+  padding: 60px 20px;
+  text-align: center;
+}
