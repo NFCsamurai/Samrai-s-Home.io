@@ -196,3 +196,47 @@ h1 {
   background-color: #0f0f10;
   color: white;
 }
+
+.video-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #0f0f10;
+}
+
+.video-section h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.video-stats {
+  color: #bbb;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
