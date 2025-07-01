@@ -181,7 +181,7 @@ h1 {
 
 .gear-item:hover {
   transform: translateY(-5px);
-  background-color: #222;
+  background-color: #c3c3c3;
 }
 
 .gear-item img {
