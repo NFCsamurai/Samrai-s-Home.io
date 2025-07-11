@@ -1,0 +1,403 @@
+/* General */
+body {
+  background-color: rgb(11, 12, 12);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔻 HEADER BAR */
+.headcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #0f0f10;
+}
+
+.headlink {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.headlink:hover {
+  color: rgb(133, 133, 133);
+}
+
+.separator {
+  color: white;
+  font-size: 26px;
+  user-select: none;
+}
+
+.home-icon {
+  height: 54px;
+  vertical-align: middle;
+}
+
+/* 🔻 INTRO SECTION */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: white;
+}
+
+.intro {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 30px;
+}
+
+.subheading {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #888;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1c;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.social i {
+  margin-right: 10px;
+  color: #ffffff;
+  width: 24px;
+  text-align: center;
+}
+
+.count {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.worked-with-section {
+  background-color: #0f0f10;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.worked-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.logo-row img {
+  height: 40px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-row img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.hobbies{
+  background-color: #0b0b0b;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 6px 8px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position it above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* === MY GEAR STYLING === */
+.gear-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.gear-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.gear-subtitle {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.gear-note {
+  color: #999;
+  font-size: 12px;
+}
+
+.gear-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gear-item {
+  background-color: #1a1a1c;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.gear-item:hover {
+  transform: translateY(-5px);
+  background-color: #c3c3c3;
+}
+
+.gear-item img {
+  max-height: 100px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.pc-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #0f0f10;
+  color: white;
+}
+
+.video-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.gear-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-thumb img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.video-thumb img:hover {
+  transform: scale(1.03);
+}
+
+.shorts-section {
+  text-align: center;
+  padding: 60px 20px;
+    background: #0f0f10;
+}
+
+.shorts-gear-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.shorts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shorts-thumb img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.shorts-thumb img:hover {
+  transform: scale(1.03);
+}
+
+
+.link-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  gap: 10px;               /* space between icons */
+}
+
+.link-yt, .link-insta {
+  width: 50px;
+  height: auto;
+}
+
+.link-twich{
+    width: 37px;
+    height: auto;
+}
+
+.newvid{
+  background-color: #0f0f10;
+}
+
+.newvidh1{
+  text-align: center;
+}
+
+.iframe, iframe {
+    width: 960px ;
+    height: 540px ;
+    margin: 0 auto;
+    background-color: #777;
+}
+
+.video-description {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 📱 Mobile Styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .headcontainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .headlink {
+    font-size: 16px;
+  }
+
+  .home-icon {
+    height: 40px;
+  }
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .intro {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .socials {
+    gap: 10px;
+  }
+
+  .social {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 14px;
+  }
+
+  .newvidh1 {
+    font-size: 24px;
+  }
+
+  .iframe, iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .video-description {
+    font-size: 14px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .separator {
+    display: none; /* Hide pipes for cleaner stacking */
+  }
+}
