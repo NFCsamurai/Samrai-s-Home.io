@@ -575,24 +575,34 @@ h1 {
       .about-container { grid-template-columns: 1fr; }
     }
   
-/* --- MOBILE REPAIR: DIVIDERS & HEADER FIX --- */
 @media (max-width: 768px) {
-    /* 1. Shrink the H1 on the About Me and other pages */
+    /* 1. Fix H1 Size */
     h1 {
-        font-size: 22px !important; /* Smaller size to fit phone screens */
+        font-size: 24px !important;
         text-align: center !important;
-        margin-top: 10px !important;
     }
 
-    /* 2. Navigation & Dividers */
+    /* 2. ASCII ART: Making it actually big */
+    .asciiimg {
+        width: 95% !important; /* Almost full width on phone */
+        max-width: 500px !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto 20px auto !important;
+        font-size: 8px !important; /* Shrinks font slightly so the rows don't wrap */
+        line-height: 1 !important;
+    }
+
+    /* 3. NAVIGATION & DIVIDERS */
     .options {
         display: flex !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 0 !important; /* Reset gap to use dividers instead */
+        gap: 0 !important; /* Remove gap to use dividers instead */
         width: 100% !important;
+        margin-bottom: 30px !important;
     }
-    
+
     .options a {
         display: flex !important;
         align-items: center !important;
@@ -601,28 +611,21 @@ h1 {
 
     .options a p {
         font-size: 13px !important;
-        margin: 5px 8px !important; /* Space around the text */
+        margin: 5px 8px !important;
         color: #c300ff !important;
     }
 
     /* This adds the "|" back safely between links */
     .options a:not(:last-child)::after {
         content: "|";
-        color: #333; /* Darker grey so the links stand out more */
-        font-size: 13px;
-        pointer-events: none; /* Makes sure you can't accidentally click the bar */
+        color: #444; /* Subtle grey divider */
+        font-size: 14px;
+        margin-left: 2px;
     }
 
-    /* 3. Disable Buggy Float Effects */
-    .gear-item, .post-card, .social-links a {
-        transform: none !important;
-        transition: none !important;
-    }
-
-    /* 4. Fix Video & Socials Overflow */
+    /* 4. IFRAME & SOCIALS FIX */
     #video-container, .footer-card {
         width: 100% !important;
-        max-width: 100% !important;
         box-sizing: border-box !important;
     }
 
