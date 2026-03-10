@@ -575,90 +575,86 @@ h1 {
       .about-container { grid-template-columns: 1fr; }
     }
   
-/* --- THE "FINAL BOSS" MOBILE FIX --- */
+/* --- THE "FORCE FIX" MOBILE OVERHAUL --- */
 @media (max-width: 768px) {
-    * {
-        box-sizing: border-box; /* This stops things from pushing out of the screen */
-    }
-
-    body {
+    /* Stop the screen from shaking/wobbling side to side */
+    html, body {
+        overflow-x: hidden !important;
+        position: relative !important;
+        width: 100% !important;
         padding: 10px !important;
-        overflow-x: hidden;
-        width: 100vw;
     }
 
-    /* 1. NAVIGATION FIX (Home is now visible) */
+    /* 1. NAV LINKS: Home fix. We remove the "|" and shrink text */
     .options {
-        gap: 5px !important; 
-        flex-wrap: wrap; /* Allows links to drop to a second line if they are too long */
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 20px;
+        gap: 2px !important; 
+        justify-content: space-around !important;
+        width: 100% !important;
+        padding: 5px 0 !important;
     }
     
     .options a p {
-        font-size: 12px !important;
-        margin: 5px 2px !important; /* Tightens them up */
+        font-size: 11px !important; /* Smaller so it stays on one screen */
+        margin: 0 !important;
     }
 
     .options p {
-        display: none; /* Removes the "|" bars on mobile to save massive space */
+        display: none !important; /* Removes the "|" bars which push Home off-screen */
     }
 
-    /* 2. ASCII IMAGE & PERSONA FIX */
+    /* 2. ASCII ART: Make it big and clear */
     .asciiimg, .persona-img {
-        width: 90% !important; /* Makes it big and centered */
-        max-width: 400px;
-        height: auto;
-        display: block;
-        margin: 10px auto !important;
+        width: 90% !important; /* Scale up for small screens */
+        height: auto !important;
+        margin: 20px auto !important;
+        display: block !important;
     }
 
-    /* 3. YOUTUBE IFRAME FIX (Home Page) */
-    .video-container, .video-card {
+    /* 3. YOUTUBE IFRAME: Home page width fix */
+    #video-container, .video-card, .video-info {
         width: 100% !important;
         max-width: 100% !important;
+        margin: 10px 0 !important;
         padding: 0 !important;
     }
 
     iframe {
         width: 100% !important;
-        aspect-ratio: 16 / 9;
         height: auto !important;
+        aspect-ratio: 16 / 9 !important;
     }
 
-    /* 4. FOOTER & SOCIAL BUTTONS FIX (The "Box" Fix) */
+    /* 4. SOCIAL BUTTONS & FOOTER: Fix the "exploding box" */
     .footer-card {
         width: 100% !important;
         padding: 15px !important;
-        margin: 20px 0 !important;
+        box-sizing: border-box !important;
     }
 
     .social-links {
-        display: flex !important;
-        flex-wrap: wrap !important; /* Wraps buttons so they don't go off screen */
-        justify-content: center !important;
-        gap: 8px !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* Exactly 2 per row */
+        gap: 10px !important;
+        width: 100% !important;
     }
 
     .social-links a {
-        flex: 1 1 40%; /* Each button takes up roughly half the row */
-        min-width: 120px;
-        text-align: center;
-        font-size: 11px !important;
-        padding: 10px 2px !important;
         margin: 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 12px !important;
+        padding: 10px 0 !important;
+        border: 1px solid #c300ff !important;
+        display: inline-block !important;
     }
 
-    /* 5. GRID FIXES */
-    .gear-grid, .social-grid, .about-container {
+    /* 5. ABOUT PAGE: Stack everything vertically */
+    .about-container {
         display: flex !important;
         flex-direction: column !important;
-        grid-template-columns: 1fr !important;
+    }
+
+    main {
         width: 100% !important;
     }
-    
-    .gear-item, .post-card {
-        width: 100% !important;
-        margin-bottom: 15px;
-    }
+}
