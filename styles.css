@@ -575,46 +575,50 @@ h1 {
       .about-container { grid-template-columns: 1fr; }
     }
   
-/* --- ULTIMATE MOBILE FIX --- */
+/* --- THE "FINAL BOSS" MOBILE FIX --- */
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
-        overflow-x: hidden; /* Stops the side-to-side wobble */
+    * {
+        box-sizing: border-box; /* This stops things from pushing out of the screen */
     }
 
-    /* 1. NAV LINKS: Pull them closer and prevent wrapping issues */
+    body {
+        padding: 10px !important;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    /* 1. NAVIGATION FIX (Home is now visible) */
     .options {
-        gap: 5px !important; /* Tighten the gap */
-        flex-wrap: nowrap; /* Keep them on one line */
-        justify-content: space-evenly;
+        gap: 5px !important; 
+        flex-wrap: wrap; /* Allows links to drop to a second line if they are too long */
+        justify-content: center;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     
     .options a p {
-        font-size: 11px !important; /* Smaller text so everything fits */
-        margin: 0;
+        font-size: 12px !important;
+        margin: 5px 2px !important; /* Tightens them up */
     }
 
     .options p {
-        margin: 0;
-        font-size: 11px;
+        display: none; /* Removes the "|" bars on mobile to save massive space */
     }
 
-    /* 2. ASCII AVATAR: Make it big enough to actually see */
+    /* 2. ASCII IMAGE & PERSONA FIX */
     .asciiimg, .persona-img {
-        width: 90% !important; /* Almost full width on phones */
-        max-width: none;
+        width: 90% !important; /* Makes it big and centered */
+        max-width: 400px;
         height: auto;
         display: block;
-        margin: 0 auto 20px auto;
+        margin: 10px auto !important;
     }
 
-    /* 3. YOUTUBE IFRAME: Fix the width leak */
-    #video-container, .video-card {
+    /* 3. YOUTUBE IFRAME FIX (Home Page) */
+    .video-container, .video-card {
         width: 100% !important;
-        max-width: 100%;
-        margin: 0 auto;
+        max-width: 100% !important;
+        padding: 0 !important;
     }
 
     iframe {
@@ -623,13 +627,38 @@ h1 {
         height: auto !important;
     }
 
-    /* 4. SOCIAL BUTTONS: Fix the overflow (2x2 Grid) */
-    .social-links {
-        display: grid !important; 
-        grid-template-columns: 1fr 1fr !important; /* Force 2 columns */
-        gap: 8px !important;
+    /* 4. FOOTER & SOCIAL BUTTONS FIX (The "Box" Fix) */
+    .footer-card {
         width: 100% !important;
-        justify-content: center;
+        padding: 15px !important;
+        margin: 20px 0 !important;
     }
 
-    .social-links a
+    .social-links {
+        display: flex !important;
+        flex-wrap: wrap !important; /* Wraps buttons so they don't go off screen */
+        justify-content: center !important;
+        gap: 8px !important;
+    }
+
+    .social-links a {
+        flex: 1 1 40%; /* Each button takes up roughly half the row */
+        min-width: 120px;
+        text-align: center;
+        font-size: 11px !important;
+        padding: 10px 2px !important;
+        margin: 0 !important;
+    }
+
+    /* 5. GRID FIXES */
+    .gear-grid, .social-grid, .about-container {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+    }
+    
+    .gear-item, .post-card {
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
