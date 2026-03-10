@@ -575,56 +575,79 @@ h1 {
       .about-container { grid-template-columns: 1fr; }
     }
   
-
-      /* --- MOBILE OPTIMIZATION --- */
+/* --- COMPREHENSIVE MOBILE OVERHAUL --- */
 @media (max-width: 768px) {
     body {
-        padding: 10px; /* More space on small screens */
+        padding: 10px;
+        overflow-x: hidden; /* Prevents side-scrolling */
     }
 
-    /* Stack the Navigation options */
+    /* 1. FIX NAVIGATION (Options) */
     .options {
-        flex-wrap: wrap;
-        gap: 10px;
-        font-size: 14px;
+        gap: 8px; /* Closer together */
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 13px; /* Slightly smaller text to ensure "Home" fits */
     }
     
+    .options a p {
+        margin: 0;
+        padding: 5px;
+    }
+
     .options p {
-        display: none; /* Hide the "|" separators on mobile to save space */
+        margin: 0;
+        color: #333; /* Make the "|" separators subtle or hidden */
     }
 
-    /* About Page: Stack Sidebar and Content */
-    .about-container {
-        grid-template-columns: 1fr !important; /* Forces single column */
-        gap: 20px;
+    /* 2. FIX ASCII AVATAR (Make it visible) */
+    .asciiimg, .persona-img {
+        width: 85% !important; /* Larger on mobile so you can actually see the art */
+        max-width: 350px;
+        margin: 20px auto;
+        display: block;
     }
 
-    .system-info {
+    /* 3. FIX YOUTUBE IFRAME (Home Page) */
+    .video-container, .video-card {
+        width: 100% !important;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: auto;
+        aspect-ratio: 16 / 9; /* Keeps the video shape perfect */
+    }
+
+    /* 4. FIX FOOTER & SOCIAL BUTTONS (Stop the overflow) */
+    .footer-card {
+        padding: 15px;
         width: 100%;
         box-sizing: border-box;
     }
 
-    .persona-img {
-        width: 60%; /* Make persona pic a bit smaller on mobile */
+    .social-links {
+        display: grid; /* Use a grid instead of a row */
+        grid-template-columns: 1fr 1fr; /* Two buttons per row */
+        gap: 10px;
+        width: 100%;
     }
 
-    /* Gear & Projects Grid: Switch to 1 column */
-    .gear-grid, .module-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    /* Socials Page: Adjust card sizes */
-    .social-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    h1 {
-        font-size: 24px; /* Scaled down header for mobile */
+    .social-links a {
+        display: block;
         text-align: center;
+        padding: 10px 5px;
+        font-size: 12px;
+        border: 1px solid #c300ff;
+        margin: 0 !important; /* Remove any forced margins */
     }
 
-    /* Footer: Stack form elements */
+    /* 5. FIX CONTACT FORM */
     .footer-card form {
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -632,11 +655,13 @@ h1 {
     .footer-card input, 
     .footer-card textarea {
         width: 100% !important;
-        margin-bottom: 10px;
+        box-sizing: border-box;
     }
 
-    /* Fix ASCII image on Index */
-    .asciiimg {
-        width: 60% !important;
+    /* 6. GRID FIXES (Gear/Projects/About) */
+    .gear-grid, .module-grid, .about-container {
+        grid-template-columns: 1fr !important;
+        display: flex;
+        flex-direction: column;
     }
-}  
+}
