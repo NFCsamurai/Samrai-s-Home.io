@@ -17,7 +17,10 @@ body {
 
 h1 {
     color: #ffffff;
-    margin-bottom: 20px;}
+    margin-bottom: 20px;
+    text-align: center;
+}
+    
 .asciiimg {
     color: #b25fff;
     width: 20%;
@@ -47,4 +50,5 @@ h1 {
     color: #e17eff;
     transform: scale(1.1);
     text-shadow:  0 0 15px #c300ff;
+
 }
