@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects - Samurai's Terminal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div class="options">
+    <a href="index.html"><p>Home</p></a>
+    <p>|</p>
+    <a href="socials.html"><p>Socials</p></a>
+    <p>|</p>
+    <a href="gear.html"><p>My Gear</p></a>
+    <p>|</p>
+    <a href="projects.html"><p>Projects</p></a>
+    <p>|</p>
+    <a href="about.html"><p>About Me</p></a>
+  </div>
+  <h1>Projects</h1>
+
+  <section class="coming-soon-section" data-aos="fade-up">
+    <div class="coming-soon-container">
+      <div class="terminal-window coming-soon">
+        <div class="terminal-header">(root@projects)/$ </div>
+        <div class="terminal-line typing" id="coming-soon-text">Building something legendary...</div>
+        <div class="cursor-blink">_</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-teaser" data-aos="fade-up">
+    <h2>What's Brewing</h2>
+    <p class="teaser-text">More content coming soon. Stay tuned for epic projects, collaborations, and creative endeavors. Track my progress across socials in the meantime!</p>
+    <div class="social-links teaser-links">
+      <a href="https://www.youtube.com/@NFCSAMURAI/" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/nfcsamurai.official/" target="_blank">Instagram</a>
+      <a href="https://www.twitch.tv/nfcronin" target="_blank">Twitch</a>
+      <a href="https://www.discord.gg/nfcsamurai" target="_blank">Discord</a>
+    </div>
+  </section>
+
+  <div class="footer-card" data-aos="fade-up">
+    <h3>Contact</h3>
+    <p>&copy; 2026 Samurai's Terminal. All rights reserved.</p>
+    <form action="https://formspree.io/f/xgonarey" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Your message:
+        <textarea name="message" required></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      easing: 'ease-out-cubic'
+    });
+
+    // Typewriter effect for coming soon
+    const text = "Building something legendary...";
+    const element = document.getElementById('coming-soon-text');
+    let index = 0;
+
+    function typeComingSoon() {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeComingSoon, 80);
+      }
+    }
+
+    window.addEventListener('load', () => {
+      element.textContent = '';
+      typeComingSoon();
+    });
+  </script>
+</body>
+</html>

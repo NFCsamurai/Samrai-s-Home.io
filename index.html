@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samurais terminal
+  </title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div class="options">
+    <a href="index.html"><p>Home</p></a>
+    <p>|</p>
+    <a href="socials.html"><p>Socials</p></a>
+    <p>|</p>
+    <a href="gear.html"><p>My Gear</p></a>
+    <p>|</p>
+    <a href="projects.html"><p>Projects</p></a>
+    <p>|</p>
+    <a href="about.html"><p>About Me</p></a>
+  </div>
+  <h1>Samurai's Terminal<span class="cursor">|</span></h1>
+  <img src="Untitled.png" alt="Ascii Image" class="asciiimg">
+  <hr>
+  <div id="youtube-count" class="follower-count"></div>
+  <div id="instagram-count" class="follower-count"></div>
+  <div id="twitch-count" class="follower-count"></div>
+  <div id="about-quote" class="follower-count"></div>
+  <hr id="quote-hr" style="display: none;">
+  <div class="right-side" id="video-container" data-aos="fade-up">
+    <div class="terminal-window">
+      <div class="terminal-header">(root@Newest Vid)/</div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/y1Zi_3gwTxA" title="PEAK IN A NUTSHELL (with new friends)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="video-info">
+        <p>PEAK IN A NUTSHELL (with new friends)</p>
+        <p>Views: 999M</p>
+        <p>Likes: 999M</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-card" id="footer-card" style="display: none;" data-aos="fade-up">
+    <h3>Connect</h3>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@NFCSAMURAI/" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/nfcsamurai.official/" target="_blank">Instagram</a>
+      <a href="https://www.twitch.tv/nfcronin" target="_blank">Twitch</a>
+      <a href="https://www.discord.gg/nfcsamurai" target="_blank">Discord</a>
+    </div>
+    <p>&copy; 2026 Samurai's Terminal. All rights reserved.</p>
+    <form action="https://formspree.io/f/xgonarey" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Your message:
+        <textarea name="message" required></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js" defer></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+</html>
