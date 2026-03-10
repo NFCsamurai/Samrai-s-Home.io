@@ -575,4 +575,68 @@ h1 {
       .about-container { grid-template-columns: 1fr; }
     }
   
+
+      /* --- MOBILE OPTIMIZATION --- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* More space on small screens */
+    }
+
+    /* Stack the Navigation options */
+    .options {
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 14px;
+    }
     
+    .options p {
+        display: none; /* Hide the "|" separators on mobile to save space */
+    }
+
+    /* About Page: Stack Sidebar and Content */
+    .about-container {
+        grid-template-columns: 1fr !important; /* Forces single column */
+        gap: 20px;
+    }
+
+    .system-info {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .persona-img {
+        width: 60%; /* Make persona pic a bit smaller on mobile */
+    }
+
+    /* Gear & Projects Grid: Switch to 1 column */
+    .gear-grid, .module-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Socials Page: Adjust card sizes */
+    .social-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    h1 {
+        font-size: 24px; /* Scaled down header for mobile */
+        text-align: center;
+    }
+
+    /* Footer: Stack form elements */
+    .footer-card form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-card input, 
+    .footer-card textarea {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+
+    /* Fix ASCII image on Index */
+    .asciiimg {
+        width: 60% !important;
+    }
+}  
