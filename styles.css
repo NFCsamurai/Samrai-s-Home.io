@@ -618,24 +618,19 @@ h1 {
         display: block !important;
         margin: 0 auto 20px auto !important;
     }
-
-#video-container, .video-card {
+/* 3. IFRAME & VIDEO FIX: Absolute Width */
+    #video-container, .video-card {
         width: 100% !important;
-        max-width: 100vw !important; /* Absolute limit to screen width */
+        max-width: 100vw !important;
         margin: 10px 0 !important;
         padding: 0 !important;
-        overflow: hidden !important; /* Cuts off any internal leaking */
     }
 
-    /* Video Lock */
     iframe {
         width: 100% !important;
-        max-width: 100% !important;
         height: auto !important;
-        aspect-ratio: 16 / 9 !important; /* Forces the correct video shape */
-        display: block !important;
+        aspect-ratio: 16 / 9;
     }
-}
 
     /* 5. THE SOCIALS BOX FIX */
     .footer-card {
@@ -659,4 +654,5 @@ h1 {
         font-size: 12px !important;
     }
 }
+
 
