@@ -626,11 +626,11 @@ h1 {
         padding: 0 !important;
     }
 
-    iframe {
-        width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 16 / 9;
-    }
+iframe {
+    width: 100% !important; /* Forces it to match the phone width */
+    height: auto !important;
+    aspect-ratio: 16 / 9;   /* Keeps the cinematic shape */
+}
 
     /* 5. THE SOCIALS BOX FIX */
     .footer-card {
@@ -653,3 +653,4 @@ h1 {
         padding: 12px 5px !important;
         font-size: 12px !important;
     }
+
