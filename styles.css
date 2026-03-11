@@ -619,22 +619,23 @@ h1 {
         margin: 0 auto 20px auto !important;
     }
 
-    /* 4. THE IFRAME LOCK (STOPS THE BIGNESS) */
-    #video-container, .video-card {
+#video-container, .video-card {
         width: 100% !important;
-        max-width: 100vw !important; /* Strictly prevents overflow */
+        max-width: 100vw !important; /* Absolute limit to screen width */
+        margin: 10px 0 !important;
         padding: 0 !important;
-        margin: 20px auto !important;
-        overflow: hidden !important;
+        overflow: hidden !important; /* Cuts off any internal leaking */
     }
 
+    /* Video Lock */
     iframe {
-        width: 100% !important; /* Fits the phone screen exactly */
+        width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
-        aspect-ratio: 16 / 9; /* Keeps it a perfect video shape */
-        border: none !important;
+        aspect-ratio: 16 / 9 !important; /* Forces the correct video shape */
+        display: block !important;
     }
+}
 
     /* 5. THE SOCIALS BOX FIX */
     .footer-card {
@@ -658,3 +659,4 @@ h1 {
         font-size: 12px !important;
     }
 }
+
