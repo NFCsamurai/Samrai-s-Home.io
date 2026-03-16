@@ -1,5 +1,5 @@
 const platforms = [
-  { prefix: "YouTube: ", number: "64", element: "youtube-count" }, 
+  { prefix: "YouTube: ", number: "65", element: "youtube-count" }, 
   { prefix: "Instagram: ", number: "65", element: "instagram-count" }, 
   { prefix: "Twitch: ", number: "12", element: "twitch-count" },
 
