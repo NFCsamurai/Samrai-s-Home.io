@@ -1,0 +1,366 @@
+/* UNTITLED CLUB - OFFICIAL STYLESHEET
+    Aesthetic: Dark, Starry, Minimalist
+*/
+
+:root {
+    --bg-color: #050505;
+    --card-bg: rgba(255, 255, 255, 0.02);
+    --accent: #ffffff;
+    --discord-blurple: #7289da;
+    --text-dim: #888888;
+    --font-mono: 'Space Mono', monospace;
+    --font-main: 'Inter', sans-serif;
+}
+
+/* --- RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* --- STAR BACKGROUND ANIMATION --- */
+#stars, #stars2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    z-index: -1;
+}
+
+#stars {
+    box-shadow: 446px 65px #FFF , 256px 456px #FFF , 800px 200px #FFF , 1200px 500px #FFF, 300px 900px #FFF, 1500px 100px #FFF, 100px 100px #FFF, 1800px 800px #FFF;
+    animation: animStar 50s linear infinite;
+}
+
+#stars2 {
+    width: 1px;
+    height: 1px;
+    box-shadow: 100px 200px #FFF, 500px 10px #FFF, 900px 700px #FFF, 1400px 400px #FFF, 200px 800px #FFF;
+    animation: animStar 100s linear infinite;
+}
+
+@keyframes animStar {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-2000px); }
+}
+
+/* --- NAVIGATION --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li { margin-left: 2rem; }
+
+.nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover { color: white; }
+
+.social-tab {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- CENTERED HERO / WELCOME SECTION --- */
+.hero-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    text-align: center;
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.welcome-title {
+    font-family: var(--font-mono);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: 15px;
+    margin: 2rem 0;
+}
+
+.welcome-body p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+.emphasis { color: #fff !important; font-weight: 700; }
+
+.action-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps spans centered */
+    gap: 12px;
+    margin: 3rem 0;
+}
+
+.action-lines span {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.divider {
+    color: #444;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+/* --- RULES SECTION --- */
+.rules-container {
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.rules-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 3.5rem;
+    border-radius: 24px;
+    max-width: 750px;
+    width: 100%;
+}
+
+.rule-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.rule-num {
+    font-family: var(--font-mono);
+    color: var(--text-dim);
+    margin-right: 25px;
+    font-size: 1.1rem;
+}
+
+/* --- ROLE TAGS --- */
+.roles-section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.role-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.role-tag {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.role-tag:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+/* --- DISCORD FOOTER CARD --- */
+.discord-footer {
+    padding: 100px 5% 50px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-card {
+    background: rgba(15, 15, 15, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    padding: 12px 35px 12px 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.4s;
+}
+
+.join-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--discord-blurple);
+}
+
+.pfp-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.server-pfp { width: 100%; height: 100%; object-fit: cover; }
+
+.join-btn {
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.join-btn:hover { background: var(--discord-blurple); color: white; }
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #43b581;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* --- RULES CONTAINER --- */
+.rules-container {
+    padding: 120px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.rules-card {
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    padding: 4rem 2rem;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-mono);
+    letter-spacing: 8px;
+    margin: 2rem 0 4rem 0;
+    color: #fff;
+}
+
+/* The Grid for ADHD Scan-ability */
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.rule-block {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.rule-block:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: var(--accent);
+}
+
+.rule-block h4 {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.rule-block p {
+    font-size: 0.95rem;
+    color: #999;
+    line-height: 1.5;
+}
+
+/* Special Styling for NSFW Rule */
+.highlight-border {
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    background: rgba(255, 0, 0, 0.02);
+}
+
+.sub-list {
+    margin-top: 15px;
+    list-style: "→ ";
+    padding-left: 20px;
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+.final-note {
+    margin-top: 5rem;
+}
+
+.final-note h3 {
+    font-family: var(--font-mono);
+    margin: 2rem 0 1rem 0;
+    letter-spacing: 4px;
+}
+
+.final-note p {
+    color: #777;
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+}
